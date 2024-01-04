@@ -40,8 +40,8 @@
             if (password_verify($password, $user["password"])) {
                 session_start();
                 $_SESSION["user"]="yes";
-
-               header("Location: index.php");
+                $_SESSION["email"] = $email;
+               header("Location: personaldetails.php");
 
                die();
             }
@@ -76,7 +76,7 @@
             <button type="Sumbit" class="button" name="submit" value="submit" >Login</button>
             <div class="register-link">
                 <p>Don't have an account?
-                    <a href="#">Register</a>
+                    <a href="registration.php">Register</a>
                 </p>
 
             </div>

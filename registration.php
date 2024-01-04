@@ -101,7 +101,7 @@
             <button type="Sumbit" class="button" name="submit">Register</button>
             <div class="register-link">
                 <p>Already have an account?
-                    <a href="#">Login</a>
+                    <a href="login.php">Login</a>
                 </p>
 
             </div>
