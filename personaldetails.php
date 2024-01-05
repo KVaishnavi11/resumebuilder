@@ -75,6 +75,7 @@
 
                             if (mysqli_stmt_execute($updateStmt)) {
                                 echo "<div class='alert alert-success'>Your data was updated successfully. Please fill in the next details</div>";
+                                header("Location: educationaldetails.php");
                             } else {
                                 die("Something went wrong");
                             }

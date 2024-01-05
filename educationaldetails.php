@@ -85,6 +85,7 @@
 
                             if (mysqli_stmt_execute($updateStmt)) {
                                 echo "<div class='alert alert-success'>Your data was updated successfully. Please fill in the next details</div>";
+                                header("Location: extradetails.php");
                             } else {
                                 die("Something went wrong");
                             }
@@ -148,7 +149,7 @@
             <div class="input-box">
                 <div class="col-30">
                     
-                    <input type="text" placeholder="Qualification(Post-Graduation)" rename="postgraduation" value="<?php echo isset($userData['postgraduation']) ? $userData['postgraduation'] : ''; ?>">
+                    <input type="text" placeholder="Qualification(Post-Graduation)" name="postgraduation" value="<?php echo isset($userData['postgraduation']) ? $userData['postgraduation'] : ''; ?>">
                 </div>
                 <div class="col-50">
                     

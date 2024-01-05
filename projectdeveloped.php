@@ -64,7 +64,7 @@
 
                     if (mysqli_num_rows($checkResult) > 0) {
                         // User already has an entry, update the existing record
-                        $updateQuery = "UPDATE project-developed SET title1=?, link1=?, description1=?, title2=?, link2=?, description2=?, WHERE user_id=?";
+                        $updateQuery = "UPDATE project_developed SET title1=?, link1=?, description1=?, title2=?, link2=?, description2=? WHERE user_id=?";
                         $updateStmt = mysqli_stmt_init($conn);
 
                         if (mysqli_stmt_prepare($updateStmt, $updateQuery)) {
@@ -72,6 +72,7 @@
 
                             if (mysqli_stmt_execute($updateStmt)) {
                                 echo "<div class='alert alert-success'>Your data was updated successfully. Please fill in the next details</div>";
+                                header("Location: experiencedetails.php");
                             } else {
                                 die("Something went wrong");
                             }

@@ -49,6 +49,7 @@
                 $interest4 = $_POST["interest4"];
                 $interest5 = $_POST["interest5"];
                 $interest6 = $_POST["interest6"];
+                $objective = $_POST["objective"];
 
                 $errors = array();
 
@@ -69,14 +70,16 @@
 
                     if (mysqli_num_rows($checkResult) > 0) {
                         // User already has an entry, update the existing record
-                        $updateQuery = "UPDATE extra_details SET skill1=?, skill2=?, skill3=?, skill4=?, skill5=?, skill6=?, interest1=?, interest2=?, interest3=?, interest4=?, interest5=?, interest6=? WHERE user_id=?";
+                        $updateQuery = "UPDATE extra_details SET skill1=?, skill2=?, skill3=?, skill4=?, skill5=?, skill6=?, interest1=?, interest2=?, interest3=?, interest4=?, interest5=?, interest6=?, objective=? WHERE user_id=?";
                         $updateStmt = mysqli_stmt_init($conn);
 
                         if (mysqli_stmt_prepare($updateStmt, $updateQuery)) {
-                            mysqli_stmt_bind_param($updateStmt, "ssssssssssssi", $skill1, $skill2, $skill3, $skill4, $skill6, $interest1, $interest2, $interest3, $interest4, $interest5,$interest6, $userId);
+                            mysqli_stmt_bind_param($updateStmt, "sssssssssssssi", $skill1, $skill2, $skill3, $skill4, $skill5, $skill6, $interest1, $interest2, $interest3, $interest4, $interest5,$interest6,$objective, $userId);
 
                             if (mysqli_stmt_execute($updateStmt)) {
                                 echo "<div class='alert alert-success'>Your data was updated successfully. Please fill in the next details</div>";
+                                header("Location: projectdeveloped.php");
+                            
                             } else {
                                 die("Something went wrong");
                             }
@@ -85,11 +88,11 @@
                         }
                     } else {
                         // User does not have an entry, insert a new record
-                        $insertQuery = "INSERT INTO extra_details (user_id, skill1, skill2, skill3, skill4, skill5, skill6, interest1, interest2, interest3, interest4, interest5, interest6) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                        $insertQuery = "INSERT INTO extra_details (user_id, skill1, skill2, skill3, skill4, skill5, skill6, interest1, interest2, interest3, interest4, interest5, interest6, objective) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
                         $insertStmt = mysqli_stmt_init($conn);
 
                         if (mysqli_stmt_prepare($insertStmt, $insertQuery)) {
-                            mysqli_stmt_bind_param($insertStmt, "issssssssssss", $userId, $skill1, $skill2, $skill3, $skill4, $skill5, $skill6, $interest1, $interest2, $interest3, $interest4, $interest5, $interest6);
+                            mysqli_stmt_bind_param($insertStmt, "isssssssssssss", $userId, $skill1, $skill2, $skill3, $skill4, $skill5, $skill6, $interest1, $interest2, $interest3, $interest4, $interest5, $interest6, $objective);
 
                             if (mysqli_stmt_execute($insertStmt)) {
                                 echo "<div class='alert alert-success'>Your data was submitted successfully. Please fill in the next details</div>";
@@ -104,7 +107,7 @@
             }
 
             // Fetch existing user data
-            $query3 = "SELECT skill1, skill2, skill3, skill4, skill5, skill6, interest1, interest2, interest3, interest4, interest5, interest6 FROM extra_details WHERE user_id='$userId'";
+            $query3 = "SELECT skill1, skill2, skill3, skill4, skill5, skill6, interest1, interest2, interest3, interest4, interest5, interest6, objective FROM extra_details WHERE user_id='$userId'";
             $result = mysqli_query($conn, $query3);
 
             if ($result) {
@@ -175,6 +178,16 @@
                 </div>
                 <div class="col-50">
                     <input type="text" placeholder="Interest" name="interest6" value="<?php echo isset($userData['interest6']) ? $userData['interest6'] : ''; ?>">
+                </div>
+            </div>
+
+            <div class="input-box">
+                    <h3><i class='bx bxs-badge-check'></i>Objectives</h3>
+            </div>
+            
+            <div class="input-box">
+                <div class="col-50">
+                    <input type="text" placeholder="Please describe yourself in shorts word" name="objective" value="<?php echo isset($userData['objective']) ? $userData['objective'] : ''; ?>">
                 </div>
             </div>
     
