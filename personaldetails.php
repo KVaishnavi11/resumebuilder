@@ -177,7 +177,8 @@
                 </div>
             </div>
 
-            <button class="button" type="Submit" name="submit">Next</button>
+                <button class="button" type="Submit" name="submit">Next</button>
+                
         </form>
     </div>
 </body>

@@ -1,0 +1,116 @@
+* {
+    padding: 7px;
+    /* box-sizing: border-box; */
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(244, 236, 236);
+}
+
+.wrapper {
+    width: 90%;
+    height: 90%;
+    background-color: #f2f2f2;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    color: #000000;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.wrapper h1 {
+    font-size: 45px;
+    text-align: center;
+    
+}
+
+.wrapper h3{
+    font-size: 24px;
+    margin-left: 75px;
+}
+ .input-box {
+     display: flex; 
+}   
+
+.input-box .col-50 {
+    width: 100%;
+    display: flex; 
+    margin-right: 3%;
+    margin-left: 3%;
+    align-items: center; /* Added to center content vertically */
+}
+
+.input-box .col-50 label,
+.input-box .col-50 input 
+{
+    width: 60%;
+}
+
+.input-box input {
+    background: transparent;
+    border: 20px;
+    outline: none;
+    border: 2px solid rgba(55, 52, 52, 0.2);
+    border-radius: 20px;
+    font-size: 14px;
+    color: rgb(102, 102, 102);
+    padding: 20px 20px 20px 20px;
+}
+
+.input-box input:focus {
+    border-color: #424141;
+}
+
+.input-box input::placeholder {
+    color: black;
+}
+
+.wrapper .btn .button1 {
+    display: flex;
+    justify-content:center;
+    align-items: right;
+    width: 20%;
+    height: 45px;
+    margin: 160px; /* Center the button */
+    background: rgba(148, 63, 105, 0.267);
+    border: none;
+    outline: none;
+    border-radius: 25px;    
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.611);
+    cursor: pointer;
+    font-size: 18px;
+    color: #e26464;
+    font-weight: 600;
+    margin-top: 10px;
+    display:inline-block;
+}
+
+.wrapper .btn .button2{
+    display: flex;
+    justify-content:center;
+    align-items: right;
+    width: 20%;
+    height: 45px;
+    margin: 160px; /* Center the button */
+    background: rgba(36, 138, 107, 0.267);
+    border: none;
+    outline: none;
+    border-radius: 25px;    
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.611);
+    cursor: pointer;
+    font-size: 18px;
+    color: rgb(27,167,39);
+    font-weight: 600;
+    margin-top: 10px;
+    display:inline-block;
+}
+
+.wrapper .button:hover {
+    background-color: #4681f4;
+}

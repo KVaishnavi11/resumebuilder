@@ -77,6 +77,7 @@
                               die("Something went wrong");
                        }
                     }
+                    
        }
      ?>
         <form action="registration.php"  method="post">
