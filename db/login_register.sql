@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 05, 2024 at 03:44 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- Generation Time: Jan 05, 2024 at 08:47 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -58,7 +58,8 @@ CREATE TABLE `educational_details` (
 
 INSERT INTO `educational_details` (`id`, `user_id`, `collegename`, `date1`, `date2`, `postgraduation`, `description`, `collegename1`, `date3`, `date4`, `graduation`, `description1`, `schoolname`, `date5`, `date6`, `hsc`, `description2`, `schoolname1`, `date7`, `date8`, `ssc`, `description3`) VALUES
 (1, 5, 'efdjsk', '0000-00-00', '0000-00-00', NULL, 'outg8irsygidu', 'raisoni', '0000-00-00', '2001-09-02', 'uryhfsuehfufk', NULL, 'fiysieufhieskhvs', '0000-00-00', '0000-00-00', 'feszjljfczjlkdmfkl.mc', NULL, 'utuyyhgfgv', '0000-00-00', '0000-00-00', 'erfis8yf7ursysuik', NULL),
-(2, 6, 'fsxffx', '0000-00-00', '0000-00-00', NULL, '', '', '0000-00-00', '0000-00-00', '', NULL, '', '0000-00-00', '0000-00-00', '', NULL, '', '0000-00-00', '0000-00-00', '', NULL);
+(2, 6, 'fsxffx', '0000-00-00', '0000-00-00', NULL, '', '', '0000-00-00', '0000-00-00', '', NULL, '', '0000-00-00', '0000-00-00', '', NULL, '', '0000-00-00', '0000-00-00', '', NULL),
+(0, 2, 'qw', '0000-00-00', '0000-00-00', 'w', 'w', 'w', '0000-00-00', '0000-00-00', 'w', NULL, 'w', '0000-00-00', '0000-00-00', 'w', NULL, 'w', '0000-00-00', '0000-00-00', 'w', NULL);
 
 -- --------------------------------------------------------
 
@@ -84,7 +85,8 @@ CREATE TABLE `exp_details` (
 --
 
 INSERT INTO `exp_details` (`id`, `user_id`, `organisation1`, `position1`, `duration1`, `description1`, `organisation2`, `position2`, `duration2`, `description2`) VALUES
-(0, 6, 'dsfdf', 'djlksm', 'sdfdf', 'adfdfdf', 'fdsafd', 'dfdaf', 'adfdsa', 'adfdsaffd');
+(0, 6, 'dsfdf', 'djlksm', 'sdfdf', 'adfdfdf', 'fdsafd', 'dfdaf', 'adfdsa', 'adfdsaffd'),
+(0, 2, 'w', 'w', 'w', 'w', 'w', 'w', 'w', 'w');
 
 -- --------------------------------------------------------
 
@@ -106,15 +108,18 @@ CREATE TABLE `extra_details` (
   `interest3` varchar(256) DEFAULT NULL,
   `interest4` varchar(256) DEFAULT NULL,
   `interest5` varchar(256) DEFAULT NULL,
-  `interest6` varchar(256) DEFAULT NULL
+  `interest6` varchar(256) DEFAULT NULL,
+  `objective` varchar(1000) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `extra_details`
 --
 
-INSERT INTO `extra_details` (`id`, `user_id`, `skill1`, `skill2`, `skill3`, `skill4`, `skill5`, `skill6`, `interest1`, `interest2`, `interest3`, `interest4`, `interest5`, `interest6`) VALUES
-(1, 6, 'g', 'dfd', 'dfa', 'adf', 'hjbk', 'jkl.l', 'ads', 'adsf', 'adf', '', '', '');
+INSERT INTO `extra_details` (`id`, `user_id`, `skill1`, `skill2`, `skill3`, `skill4`, `skill5`, `skill6`, `interest1`, `interest2`, `interest3`, `interest4`, `interest5`, `interest6`, `objective`) VALUES
+(1, 6, 'g', 'dfd', 'dfa', 'adf', 'hjbk', 'jkl.l', 'ads', 'adsf', 'adf', '', '', '', NULL),
+(0, 2, 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'this is my new demo objective please check'),
+(0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -142,11 +147,7 @@ CREATE TABLE `personal_details` (
 --
 
 INSERT INTO `personal_details` (`id`, `user_id`, `firstname`, `lastname`, `email`, `headline`, `phonenumber`, `address`, `city`, `postcode`, `linkedin`, `github`) VALUES
-(1, NULL, 'Vaishnavi', 'Kamdee', 'vaishnavikamdee2304@gmail.com', '', '+19130075365', 'Nagpur', 'Nagpur', '440022', '', ''),
-(2, NULL, 'Amol', 'Maskare', 'vaishnavikamdee2304@gmail.com', 'Software Enginerr', '9130075365', 'Nagpur', 'Nagpur', '440022', 'www.amolmaskare', 'wwwjfdifjdj'),
-(3, NULL, 'Vaishnavi', 'Kamdee', 'vaishnavikamdee2304@gmail.com', 'web development', '+19130075365', 'Nagpur', 'Nagpur', '440022', 'www.vaishnavi', 'xvndlfkjads'),
-(4, 5, 'pratiksha', 'rahood', 'prati@gmail.com', 'web development', '437847938', 'vasudev nagar', 'nagpur', '440222', 'fjdkslf', 'jdlsfldk'),
-(5, 6, 'devyani', 'rasekar', 'dsf', 'web development', 'sdf', 'fdsaffdsaf', 'adsf', 'fdsaf', 'safd', '');
+(4, 2, 'aman', 'Maskare', 'amolm', '', '07387768236', 'New laxmy nagar, Gondia, GONDIYA MAHARASHTRA', 'GONDIA', '441614', '', '');
 
 -- --------------------------------------------------------
 
@@ -170,7 +171,7 @@ CREATE TABLE `project_developed` (
 --
 
 INSERT INTO `project_developed` (`id`, `user_id`, `title1`, `link1`, `description1`, `title2`, `link2`, `description2`) VALUES
-(0, 6, 'sdfds', 'adfdadfd', 'adfd', 'dfdf', 'dfdf', 'asdfd');
+(0, 2, 'e', 'o', 'o', 'o', 'o', 'o');
 
 -- --------------------------------------------------------
 
@@ -179,10 +180,10 @@ INSERT INTO `project_developed` (`id`, `user_id`, `title1`, `link1`, `descriptio
 --
 
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
-  `username` varchar(128) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `id` int(10) NOT NULL,
+  `username` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `password` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -190,45 +191,17 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
-(1, 'Vaishnavi', 'vaishnavikamdee2304@gmail.com', 'Vaish234'),
-(2, 'pratiksha', 'protuefj@gmail.com', 'pratiksha'),
-(3, 'cdfgh', 'vasisj@gmail.com', 'asdfghjk'),
-(4, 'Ashish', 'Ashish@gmail.com', '$2y$10$UvutCArIHaMPWHORu1GxLOBzQaWl4uBfMW1UDteH3etam7z3Tr0B6'),
-(5, 'Vaish', 'vaishnavi2304@gmail.com', '$2y$10$mgvyPc.tLMzdOs8cQ8ve.ebcFzRg72VUky7IX08OfIgo92sltvwn6'),
-(6, 'devyani', 'devyani@gmail.com', '$2y$10$yTmgSL.VPJqTr8/8kqP66uv0YX.lfU0u/P9FwebHIM3ajv/xVTZ.e');
+(1, 'admin', 'amolmaskare1@gmail.com', 'adminadmin'),
+(2, 'pratiksha', 'pratiksha@gmail.com', '$2y$10$cj5UNcKwrl0KRBQcQ0jYMunjG6t5F2A6ZBFvc8i53JELYWLIdEpDK');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `educational_details`
---
-ALTER TABLE `educational_details`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `exp_details`
---
-ALTER TABLE `exp_details`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `extra_details`
---
-ALTER TABLE `extra_details`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `personal_details`
 --
 ALTER TABLE `personal_details`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `project_developed`
---
-ALTER TABLE `project_developed`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -242,28 +215,16 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `educational_details`
---
-ALTER TABLE `educational_details`
-  MODIFY `id` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `extra_details`
---
-ALTER TABLE `extra_details`
-  MODIFY `id` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- AUTO_INCREMENT for table `personal_details`
 --
 ALTER TABLE `personal_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
