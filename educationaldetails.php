@@ -236,7 +236,9 @@
                 </div>
             </div>
             <div>
-            <button class="button1" type="" >Back</button>
+            <!-- <button class="button1" type="" ><a href="personaldetails.php">Back</a></button> -->
+            <a class="button1" href="personaldetails.php">Back</a>
+
             <button class="button2" type="Submit" name="submit">Next</button>
             </div>
             

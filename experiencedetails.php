@@ -169,7 +169,9 @@
     
             <div class="btn">
 
-            <button class="button1" type="">Back</button>
+            <!-- <button class="button1" type="">Back</button> -->
+            <a class="button1" href="projectdeveloped.php">Back</a>
+
             <button class="button2" type="Submit" name="submit">Next</button>
             </div>
             

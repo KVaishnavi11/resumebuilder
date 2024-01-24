@@ -58,10 +58,13 @@ mysqli_close($conn);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="template.css">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
-    <script src="html2pdf.bundle.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
-        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
     <title>Your Resume</title>
 </head>
 
@@ -74,14 +77,13 @@ mysqli_close($conn);
             </div>
             <div class="contact-info">
                 <span class="email"><?php echo $userData['email']; ?></span>
-                <span class="email-val"></span>
                 <span class="separator"></span>
                 <span class="phone"><?php echo $userData['phonenumber']; ?></span>
                 <?php if (!empty($userData['address'])) : ?>
                 <br>
                 <span class="position">Address:</span>
-                <span class="phone"><?php echo $userData['address']; ?> <?php echo ',' ?>
-                    <?php echo $userData['city']; ?><?php echo ',' ?> <?php echo $userData['postcode']; ?></span>
+                <?php echo $userData['address']; ?> <?php echo ',' ?>
+                    <?php echo $userData['city']; ?><?php echo ',' ?> <?php echo $userData['postcode']; ?>
                 <?php endif; ?>
                 <?php if (!empty($userData['linkedin'])) : ?>
                 <span class="position">linkedin</span>
@@ -119,22 +121,21 @@ mysqli_close($conn);
                             <div class="duration"><?php echo $userData['duration2']; ?></div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
         <?php endif; ?>
         <?php if (!empty($userData['title1']) || !empty($userData['link1'])) : ?>
-        <div class="details">
+        <!-- <div class="details"> -->
             <div class="section">
                 <div class="section__title">Projects</div>
                 <div class="section__list">
                     <div class="section__list-item">
+                    <div class="left">
                         <div class="name"><?php echo $userData['title1']; ?></div>
                         <div class="text"><?php echo $userData['link1']; ?></div>
                         <div class="text"><?php echo $userData['description1']; ?></div>
                     </div>
                     <?php if (!empty($userData['title2']) || !empty($userData['link2'])) : ?>
-                    <div class="section__list-item">
+                    <!-- <div class="section__list-item"> -->
+                    <div class="right">
                         <div class="name"><?php echo $userData['title2']; ?></div>
                         <div class="text"><?php echo $userData['link2']; ?></div>
                         <div class="text"><?php echo $userData['description2']; ?></div>
@@ -143,6 +144,7 @@ mysqli_close($conn);
                 </div>
             </div>
         </div>
+      
         <?php endif; ?>
         <?php if (!empty($userData['skill1'])) : ?>
         <div class="section">
@@ -178,16 +180,16 @@ mysqli_close($conn);
                             </div>
                         </div>
                         <div class="right">
-                            <input id="ck1" type="checkbox" checked />
-                            <label for="ck1"></label>
-                            <input id="ck2" type="checkbox" checked />
-                            <label for="ck2"></label>
-                            <input id="ck3" type="checkbox" />
-                            <label for="ck3"></label>
-                            <input id="ck4" type="checkbox" />
-                            <label for="ck4"></label>
-                            <input id="ck5" type="checkbox" />
-                            <label for="ck5"></label>
+                            <input id="ck6" type="checkbox" checked />
+                            <label for="c61"></label>
+                            <input id="ck7" type="checkbox" checked />
+                            <label for="ck7"></label>
+                            <input id="ck8" type="checkbox" />
+                            <label for="ck8"></label>
+                            <input id="ck9" type="checkbox" />
+                            <label for="ck9"></label>
+                            <input id="ck10" type="checkbox" />
+                            <label for="ck10"></label>
                         </div>
                     </div>
                 </div>
@@ -201,16 +203,16 @@ mysqli_close($conn);
                             </div>
                         </div>
                         <div class="right">
-                            <input id="ck1" type="checkbox" checked />
-                            <label for="ck1"></label>
-                            <input id="ck2" type="checkbox" checked />
-                            <label for="ck2"></label>
-                            <input id="ck3" type="checkbox" />
-                            <label for="ck3"></label>
-                            <input id="ck4" type="checkbox" />
-                            <label for="ck4"></label>
-                            <input id="ck5" type="checkbox" />
-                            <label for="ck5"></label>
+                            <input id="ck11" type="checkbox" checked />
+                            <label for="ck11"></label>
+                            <input id="ck12" type="checkbox" checked />
+                            <label for="ck12"></label>
+                            <input id="ck13" type="checkbox" />
+                            <label for="ck13"></label>
+                            <input id="ck14" type="checkbox" />
+                            <label for="ck14"></label>
+                            <input id="ck15" type="checkbox" />
+                            <label for="ck15"></label>
                         </div>
                     </div>
                 </div>
@@ -224,16 +226,16 @@ mysqli_close($conn);
                             </div>
                         </div>
                         <div class="right">
-                            <input id="ck1" type="checkbox" checked />
-                            <label for="ck1"></label>
-                            <input id="ck2" type="checkbox" checked />
-                            <label for="ck2"></label>
-                            <input id="ck3" type="checkbox" />
-                            <label for="ck3"></label>
-                            <input id="ck4" type="checkbox" />
-                            <label for="ck4"></label>
-                            <input id="ck5" type="checkbox" />
-                            <label for="ck5"></label>
+                            <input id="ck16" type="checkbox" checked />
+                            <label for="ck16"></label>
+                            <input id="ck17" type="checkbox" checked />
+                            <label for="ck17"></label>
+                            <input id="ck18" type="checkbox" />
+                            <label for="ck18"></label>
+                            <input id="ck19" type="checkbox" />
+                            <label for="ck19"></label>
+                            <input id="ck20" type="checkbox" />
+                            <label for="ck20"></label>
                         </div>
                     </div>
                 </div>
@@ -249,16 +251,16 @@ mysqli_close($conn);
                             </div>
                         </div>
                         <div class="right">
-                            <input id="ck1" type="checkbox" checked />
-                            <label for="ck1"></label>
-                            <input id="ck2" type="checkbox" checked />
-                            <label for="ck2"></label>
-                            <input id="ck3" type="checkbox" />
-                            <label for="ck3"></label>
-                            <input id="ck4" type="checkbox" />
-                            <label for="ck4"></label>
-                            <input id="ck5" type="checkbox" />
-                            <label for="ck5"></label>
+                            <input id="ck21" type="checkbox" checked />
+                            <label for="ck21"></label>
+                            <input id="ck22" type="checkbox" checked />
+                            <label for="ck22"></label>
+                            <input id="ck23" type="checkbox" />
+                            <label for="ck23"></label>
+                            <input id="ck24" type="checkbox" />
+                            <label for="ck24"></label>
+                            <input id="ck25" type="checkbox" />
+                            <label for="ck25"></label>
                         </div>
                     </div>
                 </div>
@@ -273,16 +275,16 @@ mysqli_close($conn);
                             </div>
                         </div>
                         <div class="right">
-                            <input id="ck1" type="checkbox" checked />
-                            <label for="ck1"></label>
-                            <input id="ck2" type="checkbox" checked />
-                            <label for="ck2"></label>
-                            <input id="ck3" type="checkbox" />
-                            <label for="ck3"></label>
-                            <input id="ck4" type="checkbox" />
-                            <label for="ck4"></label>
-                            <input id="ck5" type="checkbox" />
-                            <label for="ck5"></label>
+                            <input id="ck26" type="checkbox" checked />
+                            <label for="ck26"></label>
+                            <input id="ck27" type="checkbox" checked />
+                            <label for="ck27"></label>
+                            <input id="ck28" type="checkbox" />
+                            <label for="ck28"></label>
+                            <input id="ck29" type="checkbox" />
+                            <label for="ck29"></label>
+                            <input id="ck30" type="checkbox" />
+                            <label for="ck30"></label>
                         </div>
                     </div>
                 </div>
@@ -295,19 +297,54 @@ mysqli_close($conn);
                 </div>
                 <div class="section__list">
                     <div class="section__list-item">
-                        Football, programming.
+                    <?php if (!empty($userData['interest1'])) :echo $userData['interest1']; endif;?> <br>
+                    <?php if (!empty($userData['interest2'])) :echo $userData['interest2']; endif;?> <br>
+                    <?php if (!empty($userData['interest3'])) :echo $userData['interest3']; endif;?><br>
+                    <?php if (!empty($userData['interest4'])) :echo $userData['interest4']; endif;?><br>
+                    <?php if (!empty($userData['interest5'])) :echo $userData['interest5']; endif;?><br>
+                    <?php if (!empty($userData['interest6'])) :echo $userData['interest6']; endif;?><br>
+                   
+
                     </div>
                 </div>
             </div>
-            <button onclick="downloadPDF()">Download PDF</button>
         </div>
-        <script>
-        function downloadPDF() {
-            const element = document.querySelector('.container');
+        <button onclick="downloadPDF()">Download PDF</button>
 
-            html2pdf(element);
-        }
-        </script>
+       
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
-</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script>
+function downloadPDF() {
+    // Hide the button before capturing the HTML content
+    const button = document.querySelector('button');
+    button.style.display = 'none';
+
+    const element = document.querySelector('.container');
+
+    // Use html2canvas to capture the HTML content as an image
+    html2canvas(element).then(canvas => {
+        // Convert the canvas to a data URL
+        const imgData = canvas.toDataURL('image/png');
+
+        // Create a new jsPDF instance
+        const pdf = new jsPDF({ unit: 'px', format: 'a4' });
+
+        // Add the image to the PDF
+        pdf.addImage(imgData, 'PNG', 0, 0, pdf.internal.pageSize.width, pdf.internal.pageSize.height);
+
+        // Show the button again after capturing the HTML content
+        button.style.display = 'block';
+
+        // Save the PDF
+        pdf.save('resume.pdf');
+    });
+}
+</script>
+
+
+
+
