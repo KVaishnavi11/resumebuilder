@@ -11,6 +11,11 @@
     <div class="wrapper">
     <?php
         session_start();
+        if (!isset($_SESSION["email"])) {
+            // Redirect to the login page
+            header("Location: login.php");
+            exit();
+        }
         $host = "localhost";
         $dbuser = "root";
         $bdpassword = "";
@@ -117,9 +122,9 @@
         ?>
         <form action="projectdeveloped.php" method=post>
         <div class="logout">
-              <div><a href="login.php"><i class='bx bx-log-out' ></i><a></div>
-              <div><a href="login.php">Logout</a></div>
-            </div>
+    <div><a href="logout.php"><i class='bx bx-log-out'></i></a></div>
+    <div><a href="logout.php">Logout</a></div>
+</div>
             <h1>Project Developed</h1>
 
             <div class="input-box">

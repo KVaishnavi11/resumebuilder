@@ -1,5 +1,10 @@
 <?php
 session_start();
+if (!isset($_SESSION["email"])) {
+    // Redirect to the login page
+    header("Location: login.php");
+    exit();
+}
 $host = "localhost";
 $dbuser = "root";
 $bdpassword = "";

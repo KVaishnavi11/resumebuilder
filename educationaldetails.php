@@ -13,6 +13,11 @@
 
     <?php
         session_start();
+        if (!isset($_SESSION["email"])) {
+            // Redirect to the login page
+            header("Location: login.php");
+            exit();
+        }
         $host = "localhost";
         $dbuser = "root";
         $bdpassword = "";
@@ -132,10 +137,10 @@
         mysqli_close($conn);
         ?>
         <form action="educationaldetails.php " method=post>
-            <div class="logout">
-              <div><a href="login.php"><i class='bx bx-log-out' ></i><a></div>
-              <div><a href="login.php">Logout</a></div>
-            </div>
+        <div class="logout">
+    <div><a href="logout.php"><i class='bx bx-log-out'></i></a></div>
+    <div><a href="logout.php">Logout</a></div>
+</div>
 
             <h1>Educational Details</h1>
             
