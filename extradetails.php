@@ -123,6 +123,10 @@
         mysqli_close($conn);
         ?>
         <form action="extradetails.php" method=post>
+        <div class="logout">
+              <div><a href="login.php"><i class='bx bx-log-out' ></i><a></div>
+              <div><a href="login.php">Logout</a></div>
+            </div>
             <h1>Extra Details</h1>
 
             <div class="input-box">
@@ -193,8 +197,7 @@
     
             <div class="btn">
 
-            <!-- <button class="button1" type="">Back</button> -->
-            <a class="button1" href="educationaldetails.php">Back</a>
+            <button class="button1" type="back" name="back"><a href="educationaldetails.php">Back </a></button>
 
             <button class="button2" type="Submit" name="submit">Next</button>
             </div>

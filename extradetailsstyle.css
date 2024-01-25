@@ -9,17 +9,17 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: rgb(244, 236, 236);
+    background: black;
 }
 
 .wrapper {
     width: 90%;
     height: 90%;
-    background-color: #f2f2f2;
+    background-color: black;
     border: 3px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(20px);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-    color: #000000;
+    color: #fff;
     border-radius: 10px;
     padding: 30px 40px;
 }
@@ -27,7 +27,7 @@ body {
 .wrapper h1 {
     font-size: 45px;
     text-align: center;
-    
+    color: blue;
 }
 
 .wrapper h3{
@@ -56,19 +56,19 @@ body {
     background: transparent;
     border: none;
     outline: none;
-    border: 2px solid rgba(55, 52, 52, 0.2);
+    border: 2px solid rgba(249, 244, 244, 0.2);
     border-radius: 20px;
     font-size: 14px;
-    color: rgb(102, 102, 102);
+    color: aliceblue;
     padding: 20px 240px 20px 20px;
 }
 
 .input-box input:focus {
-    border-color: #424141;
+    border-color: rgb(203, 205, 254);
 }
 
 .input-box input::placeholder {
-    color: black;
+    color: #fff;
 }
 
 .wrapper .btn .button1 {
@@ -90,6 +90,11 @@ body {
     margin-top: 10px;
     display:inline-block;
 }
+
+.wrapper .button1 a{
+    text-decoration: none;
+    color: #e26464;
+    }
 
 .wrapper .btn .button2 {
     display: flex;
@@ -115,3 +120,22 @@ body {
 .wrapper .button:hover {
     background-color: #4681f4;
 }
+
+.wrapper .logout {
+    display: flex;
+    justify-content:space-between;
+    align-items: right;
+    font-family: 'Courier New', Courier, monospace; 
+    margin-left: 25px;
+    color: #fff;
+  }
+
+  .wrapper .logout a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+  }
+
+  .wrapper .logout i{
+    font-size: 25px;
+  }

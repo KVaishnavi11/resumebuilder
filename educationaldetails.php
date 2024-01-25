@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Educational Details</title>
     <link rel="stylesheet" href="educationaldetailstyle.css"> 
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <div class="wrapper">
+        
+
     <?php
         session_start();
         $host = "localhost";
@@ -129,6 +132,11 @@
         mysqli_close($conn);
         ?>
         <form action="educationaldetails.php " method=post>
+            <div class="logout">
+              <div><a href="login.php"><i class='bx bx-log-out' ></i><a></div>
+              <div><a href="login.php">Logout</a></div>
+            </div>
+
             <h1>Educational Details</h1>
             
             <div class="input-box">
@@ -153,7 +161,7 @@
                 </div>
                 <div class="col-50">
                     
-                    <input type="text" placeholder="Description" rname="description" value="<?php echo isset($userData['description']) ? $userData['description'] : ''; ?>">
+                    <input type="text" placeholder="Description" name="description" value="<?php echo isset($userData['description']) ? $userData['description'] : ''; ?>">
                 </div>
             </div>
 
@@ -237,7 +245,10 @@
             </div>
             <div>
             <!-- <button class="button1" type="" ><a href="personaldetails.php">Back</a></button> -->
-            <a class="button1" href="personaldetails.php">Back</a>
+            <!-- <a class="button1" href="personaldetails.php">Back</a> -->
+           
+            <button class="button1" type="back" name="back"><a href="personaldetails.php">Back </a></button>
+           
 
             <button class="button2" type="Submit" name="submit">Next</button>
             </div>

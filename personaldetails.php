@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Details</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="personalstyle.css"> 
 </head>
 <body>
-    <div class="wrapper">
     <div class="wrapper">
     <?php
         session_start();
@@ -120,6 +120,12 @@
         ?>
         
         <form action="personaldetails.php" method="post">
+        <div class="logout">
+              <div><a href="login.php"><i class='bx bx-log-out' ></i><a></div>
+              <div><a href="login.php">Logout</a></div>
+            </div>
+
+            
             <h1>Personal Details</h1>
             <input type="hidden" name="user_id" value="<?php echo $userId; ?>">
 

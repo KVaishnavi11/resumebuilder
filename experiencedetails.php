@@ -119,6 +119,11 @@
         mysqli_close($conn);
         ?>
         <form action="experiencedetails.php" method=post>
+        <div class="logout">
+              <div><a href="login.php"><i class='bx bx-log-out' ></i><a></div>
+              <div><a href="login.php">Logout</a></div>
+            </div>
+            
             <h1>Experience Details</h1>
 
             <div class="input-box">
@@ -169,9 +174,7 @@
     
             <div class="btn">
 
-            <!-- <button class="button1" type="">Back</button> -->
-            <a class="button1" href="projectdeveloped.php">Back</a>
-
+            <button class="button1" type="back" name="back"><a href="projectdeveloped.php">Back </a></button>
             <button class="button2" type="Submit" name="submit">Next</button>
             </div>
             
