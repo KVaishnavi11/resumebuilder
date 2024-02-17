@@ -123,9 +123,10 @@
         <form action="projectdeveloped.php" method=post>
         <div class="logout">
     <div><a href="logout.php"><i class='bx bx-log-out'></i></a></div>
+    <h1>Project Developed</h1>
+
     <div><a href="logout.php">Logout</a></div>
 </div>
-            <h1>Project Developed</h1>
 
             <div class="input-box">
                   <h3><i class='bx bxs-badge-check'></i>Project 1</h3>

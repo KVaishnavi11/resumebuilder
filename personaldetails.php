@@ -127,12 +127,12 @@
         <form action="personaldetails.php" method="post">
         <div class="logout">
     <div><a href="logout.php"><i class='bx bx-log-out'></i></a></div>
+    <h1>Personal Details</h1>
     <div><a href="logout.php">Logout</a></div>
 </div>
 
 
             
-            <h1>Personal Details</h1>
             <input type="hidden" name="user_id" value="<?php echo $userId; ?>">
 
             <div class="input-box">

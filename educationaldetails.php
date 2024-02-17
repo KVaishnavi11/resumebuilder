@@ -10,7 +10,6 @@
 <body>
     <div class="wrapper">
         
-
     <?php
         session_start();
         if (!isset($_SESSION["email"])) {
@@ -139,10 +138,9 @@
         <form action="educationaldetails.php " method=post>
         <div class="logout">
     <div><a href="logout.php"><i class='bx bx-log-out'></i></a></div>
+    <h1>Educational Details</h1>
     <div><a href="logout.php">Logout</a></div>
 </div>
-
-            <h1>Educational Details</h1>
             
             <div class="input-box">
                 <div class="col-55">

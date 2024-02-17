@@ -78,7 +78,7 @@ mysqli_close($conn);
         <div class="header">
             <div class="full-name">
                 <span class="first-name"><?php echo $userData['firstname']; ?></span>
-                <span class="last-name"><?php echo $userData['lastname']; ?></span>
+                <span class="first-name"><?php echo $userData['lastname']; ?></span>
             </div>
             <div class="contact-info">
                 <span class="email"><?php echo $userData['email']; ?></span>
@@ -91,18 +91,21 @@ mysqli_close($conn);
                     <?php echo $userData['city']; ?><?php echo ',' ?> <?php echo $userData['postcode']; ?>
                 <?php endif; ?>
                 <?php if (!empty($userData['linkedin'])) : ?>
+                    <br>
                 <span class="position">linkedin</span>
                 <span class="phone"><?php echo $userData['linkedin']; ?></span>
                 <span class="phone-val"></span>
                 <?php endif; ?>
                 <?php if (!empty($userData['github'])) : ?>
+                    <br>
                 <span class="position">github</span>
                 <span class="phone"><?php echo $userData['github']; ?></span>
                 <span class="phone-val"></span>
                 <?php endif; ?>
             </div>
             <div class="about">
-                <span class="position">Front-End Developer </span>
+            <!-- <div class="section__title"><b><u>Objective</u></b></div> -->
+                <span class="position">Objective</span>
                 <div class="desc" contenteditable="true">
                     <?php echo (!empty($userData['objective'])) ? $userData['objective'] : 'This is a demo text. Edit me!'; ?>
                 </div>
@@ -128,7 +131,7 @@ mysqli_close($conn);
                     </div>
         <?php endif; ?>
         <?php if (!empty($userData['title1']) || !empty($userData['link1'])) : ?>
-        <!-- <div class="details"> -->
+        <div class="details">
             <div class="section">
                 <div class="section__title">Projects</div>
                 <div class="section__list">
